@@ -4,6 +4,7 @@ import router from './router'
 import {
   Vuetify,
   VApp,
+  VCarousel,
   VNavigationDrawer,
   VFooter,
   VList,
@@ -18,6 +19,7 @@ import '../node_modules/vuetify/src/stylus/app.styl'
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VCarousel,
     VNavigationDrawer,
     VFooter,
     VList,
