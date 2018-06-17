@@ -1,11 +1,11 @@
 <template>
   <v-app>
+    <!-- mobile nav drawer -->
     <v-navigation-drawer temporary fixed v-model="sideNav">
       <v-list>
         <v-list-tile 
           v-for="item in menuItems" 
           :key="item.title"
-          router
           :to="item.link"
         >
           <v-list-tile-action>
@@ -17,7 +17,7 @@
     </v-navigation-drawer>
 
     <v-toolbar dark class="primary">
-      <v-toolbar-side-icon @click.native="sideNav = !sideNav"
+      <v-toolbar-side-icon @click.stop="sideNav = !sideNav"
       class="hidden-sm-and-up"></v-toolbar-side-icon>
       <v-toolbar-title>
         <router-link to="/" tag="span" style="cursor: pointer">DevMeetup</router-link>
@@ -28,7 +28,6 @@
           flat 
           v-for="item in menuItems" 
           :key="item.title"
-          router
           :to="item.link"
         >
           <v-icon left>{{ item.icon }}</v-icon>  

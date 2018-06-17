@@ -2,7 +2,7 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 sm6 class="text-xs-center text-sm-right">
-        <v-btn large router to="/meetups" class="info" >Explore Meetups</v-btn>
+        <v-btn large router to="/meetups" class="info">Explore Meetups</v-btn>
       </v-flex>
       <v-flex xs12 sm6 class="text-xs-center text-sm-left">
         <v-btn large router to="/meetup/new" class="info">Organise Meetup</v-btn>
@@ -11,11 +11,12 @@
 
     <v-layout row wrap class="mt-2">
       <v-flex xs12>
-        <v-carousel>
+        <v-carousel style="cursor: pointer;">
           <v-carousel-item 
             v-for="meetup in meetups" 
             :src="meetup.imageUrl" 
             :key="meetup.id"
+            @click.native="onLoadMeetup(meetup.id)"
           >
           <div class="title">
             {{ meetup.title }}
@@ -38,9 +39,14 @@ export default {
   data () {
     return {
       meetups: [
-        { imageUrl: 'https://i.imgur.com/5tkmLuD.png', id: 'asdfglfh', title: 'test k oko ko k okok' },
-        { imageUrl: 'https://i.imgur.com/5tkmLuD.png', id: 'okokok', title: 'test2' }
+        { imageUrl: 'https://i.imgur.com/rRWen3h.jpg', id: 'asdfglfh', title: 'title1' },
+        { imageUrl: 'https://i.imgur.com/rRWen3h.jpg', id: 'okokok', title: 'title2' }
       ]
+    }
+  },
+  methods: {
+    onLoadMeetup (id) {
+      this.$router.push('/meetups/' + id)
     }
   }
 }
