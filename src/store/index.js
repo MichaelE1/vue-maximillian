@@ -6,8 +6,8 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     loadedMeetups: [
-      { imageUrl: 'https://i.imgur.com/rRWen3h.jpg', id: 'asdfglz', title: 'title1', date: '2018-07-17' },
-      { imageUrl: 'https://i.imgur.com/rRWen3h.jpg', id: 'asdfglfh', title: 'title2', date: '2018-07-19' }
+      { imageUrl: 'https://i.imgur.com/rRWen3h.jpg', id: 'asdfglz', title: 'title1', date: '2018-07-17', location: 'New York', description: 'come and chill!' },
+      { imageUrl: 'https://i.imgur.com/rRWen3h.jpg', id: 'asdfglfh', title: 'title2', date: '2018-07-19', location: 'Paris', description: 'cool story bro' }
     ],
     user: {
       id: 'asdfg',

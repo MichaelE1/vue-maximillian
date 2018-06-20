@@ -14,6 +14,8 @@ import {
   VBtn,
   VIcon,
   VGrid,
+  VDatePicker,
+  VTimePicker,
   VTextField,
   VToolbar,
   transitions
@@ -31,6 +33,8 @@ Vue.use(Vuetify, {
     VBtn,
     VIcon,
     VGrid,
+    VDatePicker,
+    VTimePicker,
     VTextField,
     VToolbar,
     transitions
