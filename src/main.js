@@ -4,9 +4,11 @@ import * as firebase from 'firebase'
 import router from './router'
 import { store } from './store'
 import DateFilter from './filters/date'
+import AlertCmp from './components/Shared/Alert'
 
 import {
   Vuetify,
+  VAlert,
   VApp,
   VCard,
   VCarousel,
@@ -27,6 +29,7 @@ import '../node_modules/vuetify/src/stylus/app.styl'
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VAlert,
     VCard,
     VCarousel,
     VNavigationDrawer,
@@ -46,6 +49,7 @@ Vue.use(Vuetify, {
 Vue.config.productionTip = false
 
 Vue.filter('date', DateFilter)
+Vue.component('app-alert', AlertCmp)
 
 /* eslint-disable no-new */
 new Vue({
