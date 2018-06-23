@@ -19,6 +19,7 @@ import {
   VIcon,
   VGrid,
   VDatePicker,
+  VProgressCircular,
   VTimePicker,
   VTextField,
   VToolbar,
@@ -39,6 +40,7 @@ Vue.use(Vuetify, {
     VIcon,
     VGrid,
     VDatePicker,
+    VProgressCircular,
     VTimePicker,
     VTextField,
     VToolbar,
@@ -64,5 +66,6 @@ new Vue({
       projectId: 'devmeetup-fead1',
       storageBucket: 'devmeetup-fead1.appspot.com'
     })
+    this.$store.dispatch('loadMeetups')
   }
 })
