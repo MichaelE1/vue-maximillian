@@ -5,6 +5,7 @@ import router from './router'
 import { store } from './store'
 import DateFilter from './filters/date'
 import AlertCmp from './components/Shared/Alert'
+import EditMeetupDetailsDialog from './components/Meetup/Edit/EditMeetupDetailsDialog'
 
 import {
   Vuetify,
@@ -12,6 +13,8 @@ import {
   VApp,
   VCard,
   VCarousel,
+  VDialog,
+  VDivider,
   VNavigationDrawer,
   VFooter,
   VList,
@@ -33,6 +36,8 @@ Vue.use(Vuetify, {
     VAlert,
     VCard,
     VCarousel,
+    VDialog,
+    VDivider,
     VNavigationDrawer,
     VFooter,
     VList,
@@ -52,6 +57,7 @@ Vue.config.productionTip = false
 
 Vue.filter('date', DateFilter)
 Vue.component('app-alert', AlertCmp)
+Vue.component('app-edit-meetup-details-dialog', EditMeetupDetailsDialog)
 
 /* eslint-disable no-new */
 new Vue({
