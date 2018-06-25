@@ -99,6 +99,7 @@ export default {
       return this.title !== '' & this.location !== '' && this.imageUrl !== '' && this.description !== ''
     },
     submittableDateTime () {
+      console.log(this.date)
       const date = new Date()
       const hours = this.time.match(/^(\d+)/)[0]
       const minutes = this.time.match(/:(\d+)/)[1]
